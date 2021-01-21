@@ -1,14 +1,14 @@
-name: quickrepro
-on:
-  push:
+name: CI test
+
+on: push
+
 jobs:
-  quickrepro:
-    runs-on: ubuntu-20.04
+  build:
+    name: test
+    runs-on: ubuntu-latest
     steps:
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          set -x
-          set -euo pipefail
-          ls -la /dev
-          seq 0 10 | tee /dev/stderr | xargs echo
+    - name: test tee /dev/stderr
+      run : |
+        set -x
+        set -euo pipefail
+        seq 0 10 | tee /dev/stderr | xargs echo
