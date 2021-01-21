@@ -1,3 +1,2 @@
 # quickrepro
 
-secret MYSECRET = Env
