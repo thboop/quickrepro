@@ -1,1 +1,3 @@
 # quickrepro
+
+secret MYSECRET = env
