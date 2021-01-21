@@ -7,7 +7,5 @@ jobs:
     steps:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        env:
-          MYSECRET: ${{ secrets.MYSECRET }}
         run: |
-          echo this is my secret: $MYSECRET
+          tee /dev/stderr
